@@ -95,6 +95,10 @@ export default function pluginContentDocs(
   return {
     name: 'docusaurus-plugin-content-docs',
 
+    getThemePath() {
+      return path.resolve(__dirname, './theme');
+    },
+
     extendCli(cli) {
       cli
         .command('docs:version')
